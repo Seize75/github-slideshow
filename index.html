@@ -1,13 +1,164 @@
----
-layout: presentation
----
-
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga du Bonheur - Saint-Germain-en-Laye</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f8f5f2;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            border-bottom: 1px solid #4a7c6a;
+            margin-bottom: 2rem;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            color: #4a7c6a;
+            margin-bottom: 0.5rem;
+        }
+        
+        nav {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        
+        nav a {
+            color: #4a7c6a;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+        }
+        
+        h1, h2, h3 {
+            color: #4a7c6a;
+        }
+        
+        .section {
+            margin-bottom: 3rem;
+        }
+        
+        .box {
+            background-color: #f0ebe6;
+            padding: 1.5rem;
+            border-radius: 5px;
+            margin: 1.5rem 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #4a7c6a;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Yoga du Bonheur</div>
+        <div>Comprendre, Ressentir, Méditer</div>
+    </header>
+    
+    <nav>
+        <a href="#apropos">Qui suis-je ?</a>
+        <a href="#philosophie">Philosophie</a>
+        <a href="#methode">Méthode</a>
+        <a href="#cours">Cours</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <section id="apropos" class="section">
+        <h2>Qui suis-je ?</h2>
+        <p>Je m'appelle [Votre Prénom] et j'enseigne le yoga depuis plus de 10 ans. Ma pratique s'ancre dans le Hatha Yoga traditionnel, enrichi d'une approche personnelle centrée sur la conscience de soi et l'épanouissement intérieur.</p>
+        
+        <div class="box">
+            <h3>Mon parcours</h3>
+            <p>Formée initialement en Inde, j'ai développé une méthode unique intégrant :</p>
+            <ul>
+                <li>La compréhension des mécanismes émotionnels</li>
+                <li>L'écoute profonde du corps</li>
+                <li>La méditation comme outil de transformation</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="philosophie" class="section">
+        <h2>Ma philosophie d'enseignement</h2>
+        <p>Le yoga est un art de vivre qui nous apprend à :</p>
+        
+        <div class="box">
+            <h3>Les 4 piliers de ma pratique</h3>
+            <ol>
+                <li><strong>Compréhension de soi</strong> : Observer ses pensées sans jugement</li>
+                <li><strong>Épanouissement personnel</strong> : Trouver sa propre voie</li>
+                <li><strong>Gestion des émotions</strong> : Accueillir ce qui est</li>
+                <li><strong>Reconnexion à soi</strong> : Écouter son corps et son intuition</li>
+            </ol>
+        </div>
+    </section>
+    
+    <section id="methode" class="section">
+        <h2>Ma méthode : Yoga Conscient</h2>
+        <p>J'adapte chaque séance selon les besoins individuels avec :</p>
+        
+        <h3>Les 3 dimensions de ma pratique</h3>
+        <ul>
+            <li><strong>Asanas adaptés</strong> : Postures ajustées à chaque morphologie</li>
+            <li><strong>Respiration consciente</strong> : Apprendre à observer son souffle</li>
+            <li><strong>Visualisation guidée</strong> : Pour calmer le mental et se recentrer</li>
+        </ul>
+        
+        <p>Le but ultime : vous amener vers une méditation naturelle, sans effort.</p>
+    </section>
+    
+    <section id="cours" class="section">
+        <h2>Mes cours</h2>
+        
+        <div class="box">
+            <h3>Cours collectifs en plein air</h3>
+            <p>Lieu : Parcs de Saint-Germain-en-Laye</p>
+            <p>Horaires : Mardis et jeudis à 9h30, samedis à 11h</p>
+            <p>Tarif : 15€ la séance ou 120€ la carte de 10 séances</p>
+        </div>
+        
+        <div class="box">
+            <h3>Séances personnalisées</h3>
+            <p>En individuel à votre domicile ou en extérieur</p>
+            <p>Tarif : 60€ la séance (1h30)</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Email : contact@yogadubonheur.fr</p>
+        <p>Téléphone : 06 12 34 56 78</p>
+        
+        <div class="box">
+            <h3>Questions fréquentes</h3>
+            <p><strong>Débutants acceptés ?</strong><br>
+            Oui, tous niveaux sont bienvenus.</p>
+            
+            <p><strong>Pas souple ?</strong><br>
+            Le yoga n'est pas une question de souplesse mais d'écoute.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>Yoga du Bonheur - Saint-Germain-en-Laye</p>
+        <p>© 2024 - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
